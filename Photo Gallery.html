@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- facebook
+    <i class="fa-brands fa-facebook"></i> -->
+    <!-- <i class="fa-brands fa-whatsapp"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-youtube"></i> -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <script src="https://kit.fontawesome.com/de2ff5cdeb.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md ">
+            <div class="container-fluid">
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars navbar-icon"></i></span>
+              </button>
+
+
+              <a class="navbar-brand" href="#">
+                  <img class="logo" src="images/logo-removebg-preview.png" alt="logo">
+              </a>
+
+
+
+
+              <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link text-center text-md-left" aria-current="page" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-center text-md-left" href="#about me">About Me</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-center text-md-left" href="#">Gallery</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-center text-md-left" href="#info">Contact</a>
+                  </li>
+                  
+                  
+                </ul>
+               
+              </div>
+              <div class="icon text-center">
+                <i class="icon-s fa fa-search v"></i>
+                <a class="log text-center" href="#">Login</a>
+        
+            </div>
+            </div>
+            
+          </nav>
+        
+        <section id="benner">
+            <div class="benner-container d-flex justify-content-center align-items-center">
+                <div class="benner-body text-center">
+                    <i class="fas fa-camera fa-3x icon-syle rounded-circle mb-4" id="camera" ></i> 
+                    <h1 data-aos="fade-up"  data-aos-delay="100" data-aos-duration="4500" data-aos-offset="200" class=" hd font-weight text-white mb-5 p-5">This Is Our Picture Gallery</h1>
+                    <input class=" mb-5 p-2 inpt" type="text" name="" placeholder="Search Here...">
+                <button class="p-2  btn1"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </section> 
+       
+    </header>
+    <main>
+        <section class="filter-gallery p-1">
+          <div class="portfolio-menu text-center mb-20">
+              <ul>
+                  <!-- <li class="nav-item active " id="btn">All</li> -->
+                  <li class="nav-item " data-filter=".Nature" onclick="img_changer('nature')">Nature</li>
+                  <li class="nav-item " data-filter=".Animal" onclick="img_changer('animal')">Animal</li>
+                  <li class="nav-item " data-filter=".Birds" onclick="img_changer('bird')">Birds</li>
+                  <li class="nav-item " data-filter=".Wedding" onclick="img_changer('wedding')">Wedding</li>
+              </ul>
+          </div>
+          <div class="portfolio-item" id="div1">
+            <div class="row">
+              <div class="col-sm-12 col-md-6 col-lg-3 m-0">
+                <div data-aos="flip-left" data-aos-delay="100" data-aos-duration="4500" data-aos-offset="200" class="item Nature ">
+                <img id="img1"  src="images/nature1.jpg" width="100" height="100"  alt="">
+            </div>
+            </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div data-aos="flip-left" data-aos-delay="200" data-aos-duration="4500" data-aos-offset="200" class="  item Wedding">
+                  <img id="img2"  src="images/wedding1.jpg" width="100" height="100" alt="">
+                </div>
+              </div>
+              <div data-aos="flip-left" data-aos-delay="300" data-aos-duration="4500" data-aos-offset="200" class="col-sm-12 col-md-6 col-lg-3">
+                <div class="item Birds">
+                  <img id="img3" src="images/bird1.jpg" width="100" height="100" alt="">
+                </div>
+              </div>
+              <div data-aos="flip-left" data-aos-delay="400" data-aos-duration="4500" data-aos-offset="200" class="col-sm-12 col-md-6 col-lg-3">
+                <div class="item Birds">
+                  <img id="img3" src="images/nature4.jpg" width="100" height="100" alt="">
+                </div>
+              </div>
+            </div>
+            
+
+
+              <div  class="more-pictures">
+              <button data-aos="fade-left"
+              
+              data-aos-delay="50" data-aos-duration="4500" data-aos-offset="200" id="btn2" class="btn">More Pictures..</button>
+              <div class="more-id-div" id="more-pic">
+
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div data-aos="flip-left" data-aos-delay="100" data-aos-duration="4500" data-aos-offset="200" class="item Animal">
+                      <img id="img4" src="images/animal1.jpg" width="100" height="100" alt="">
+                    </div>
+
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div data-aos="flip-left" data-aos-delay="200" data-aos-duration="4500" data-aos-offset="200" class=" item Nature">
+                      <img id="img5" src="images/nature3.jpg" width="100" height="100" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div data-aos="flip-left" data-aos-delay="300" data-aos-duration="4500" data-aos-offset="200" class="item Wedding">
+                      <img id="img6" src="images/wedding2.jpg" width="100" height="100" alt="">
+                      </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div data-aos="flip-left" data-aos-delay="400" data-aos-duration="4500" data-aos-offset="200" class="item Birds">
+                      <img src="images/bird2.jpg" width="100" height="100" alt="">
+                      </div>
+        
+                  </div>
+                  
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="item Wedding">
+                      <img src="images/wedding3.jpg" width="100" height="100" alt="">
+                     </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="item Birds">
+                      <img src="images/bird3.jpg" width="100" height="100" alt="">
+                       </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="item Animal">
+                      <img src="images/animal3.jpg" width="100" height="100" alt="">
+                     </div>
+                  </div>
+                  
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="item Wedding">
+                      <img src="images/wedding4.jpg" width="100" height="100" alt="">
+                  </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="item Birds">
+                      <img src="images/bird4.jpg" width="100" height="100" alt="">
+                  </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="item Animal">
+                      <img src="images/animal4.jpg" width="100" height="100" alt="">
+                  </div> 
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="item Animal">
+                      <img src="images/animal5.jpg" width="100" height="100" alt="">
+                    </div>
+                  </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                      <div class="item Birds">
+                        <img src="images/bird6.jpg" width="100" height="100" alt="">
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                      <div class="item Animal">
+                        <img src="images/animal6.jpg" width="100" height="100" alt="">
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                      <div class="item Animal">
+                        <img src="images/animal7.jpg" width="100" height="100" alt="">
+                      </div>
+                    </div>
+                     <div class="col-sm-12 col-md-6 col-lg-3">
+                      <div class="item Animal">
+                        <img src="images/animal8.jpg" width="100" height="100" alt="">
+                      </div>
+                     </div>
+                      <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="item Animal">
+                          <img src="images/animal9.jpg" width="100" height="100" alt="">
+                        </div>
+                      </div>
+                </div>
+
+                </div>
+
+               </div>
+               
+              </div>
+
+              </div>
+           
+          </div>  
+
+    
+        </section>
+
+        <section class="member">
+          <div class="member-info">
+            <h1 data-aos="zoom-in-down" data-aos-delay="100" data-aos-duration="4500" data-aos-offset="200" class="text-danger text-center"> Our <span class="text-success">Information</span></h1>
+            <p data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="4500" data-aos-offset="200" class="text-center style-para1">What Are Our Member Says</p>
+          </div>
+          <div class="member-card text-center mt-5">
+            <img data-aos="zoom-out" data-aos-delay="400" data-aos-duration="4500" data-aos-offset="200" class="suj-img" src="images/sujon00.png" alt="">
+            <h2 data-aos="zoom-out" data-aos-delay="100" data-aos-duration="4500" data-aos-offset="200" class="header-name">*Sujon Roy</h2>
+            <p data-aos="flip-down" data-aos-delay="200" data-aos-duration="4500" data-aos-offset="200" class="style-para1">Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum cum quisquam optio est perferendis error architecto, quos enim amet atque, esse magnam incidunt aut voluptas modi adipisci, odio nostrum dolorem? ipsum dolor sit amet, consectetur adipisicing elit. Iure reprehenderit laboriosam id facere animi exercitationem voluptatem reiciendis assumenda dolor molestiae, tenetur asperiores sequi est eum blanditiis amet!</p>
+            
+            <i data-aos="flip-down" data-aos-delay="200" data-aos-duration="4500" data-aos-offset="200" class="icon1 m-3 fa-brands fa-facebook fa-3x  rounded-circle"></i>
+            <i data-aos="flip-down" data-aos-delay="300" data-aos-duration="4500" data-aos-offset="200" class=" icon2 m-3 fa-brands fa-whatsapp fa-3x  rounded-circle"></i>
+            <i data-aos="flip-down" data-aos-delay="400" data-aos-duration="4500" data-aos-offset="200" class=" icon3 m-3 fa-brands fa-instagram fa-3x  rounded-circle"></i>
+            <i data-aos="flip-down" data-aos-delay="500" data-aos-duration="4500" data-aos-offset="200" class=" icon4 m-3 fa-brands fa-youtube fa-3x  rounded-circle"></i>
+          </div>
+          <div data-aos="flip-down" data-aos-delay="100" data-aos-duration="500" data-aos-offset="200" class="member-collection">
+            <div class="row">
+              <div class="col-sm-6 col-md-4 col-lg-2">
+                <img class="hover" src="images/s1.jpg" alt="">
+              </div>
+              <div class=" col-sm-6 col-md-4 col-lg-2">
+                <img class="hover" src="images/s2.jpg" alt="">
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-2">
+                <img class="hover" src="images/s3.jpg" alt="">
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-2">
+                <img class="hover" src="images/s4.jpg" alt="">
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-2">
+                <img class="hover" src="images/s5.jpg" alt="">
+              </div>
+              <div class="col-sm-6 col-md-4 col-lg-2">
+                <img class="hover mb-70" src="images/s6.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+   
+     
+      
+      <!------ Include the above in your HEAD tag ---------->
+      
+      
+    <footer id="dk-footer" class="dk-footer mt-60">
+              <div class="container">
+                  <div class="row">
+                      <div class="m-10 col-sm-12 col-md-12 col-lg-3">
+                          <div class="dk-footer-box-info">
+                              <a href="index.html" class="footer-logo">
+                                  <img src="images/logo-removebg-preview.png" alt="footer_logo" class="img-fluid">
+                              </a>
+                              <p class="footer-info-text">
+                                 Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
+                              </p>
+                              
+                              <!-- End Social link -->
+                          </div>
+                          <!-- End Footer info -->
+                          <div class="footer-awarad">
+                              <img src="images/icon/best.png" alt="">
+                              <p>Best Photo Gallery 2022</p>
+                          </div>
+                      </div>
+                      <!-- End Col -->
+                      <div class="col-md-12 col-lg-8">
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <div class="contact-us">
+                                      <div class="contact-icon">
+                                          <i class="fa fa-map-o" aria-hidden="true"></i>
+                                      </div>
+                                      <!-- End contact Icon -->
+                                      <div class="contact-info col-sm-12 mt-10">
+                                          <h3>Bangladesh Rangpur</h3>
+                                          <p>Setabgong Road to Dinajpur</p>
+                                      </div>
+                                      <!-- End Contact Info -->
+                                  </div>
+                                  <!-- End Contact Us -->
+                              </div>
+                              <!-- End Col -->
+                              <div class="col-md-6">
+                                  <div class="contact-us contact-us-last">
+                                      <div class="contact-icon">
+                                          <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                                      </div>
+                                      <!-- End contact Icon -->
+                                      <div class="contact-info">
+                                          <h3>015 711 9 5353</h3>
+                                          <p>Give us a call</p>
+                                      </div>
+                                      <!-- End Contact Info -->
+                                  </div>
+                                  <!-- End Contact Us -->
+                              </div>
+                              <!-- End Col -->
+                          </div>
+                          <!-- End Contact Row -->
+                          <div class="row">
+                              <div class="col-md-12 col-lg-6">
+                                  <div class="footer-widget footer-left-widget">
+                                      <div class="section-heading">
+                                          <h3>Useful Links</h3>
+                                          <span class="animate-border border-black"></span>
+                                      </div>
+                                      <ul class="link">
+                                          <li>
+                                              <a  href="#">About us</a>
+                                          </li>
+                                          <li>
+                                              <a href="#">Services</a>
+                                          </li>
+                                          <li>
+                                              <a href="#">Projects</a>
+                                          </li>
+                                          <li>
+                                              <a href="#">Our Team</a>
+                                          </li>
+                                      </ul>
+                                      <ul>
+                                          <li>
+                                              <a href="#">Contact us</a>
+                                          </li>
+                                          <li>
+                                              <a href="#">Picture</a>
+                                          </li>
+                                          <li>
+                                              <a href="#">Testimonials</a>
+                                          </li>
+                                          <li>
+                                              <a href="#">Faq</a>
+                                          </li>
+                                      </ul>
+                                  </div>
+                                  <!-- End Footer Widget -->
+                              </div>
+                              <!-- End col -->
+                              <div class="col-md-12 col-lg-6">
+                                  <div class="footer-widget">
+                                      <div class="section-heading">
+                                          <h3 class="mt5 mb-5">Follow Us</h3>
+                                          <span class="animate-border border-black"></span>
+                                      </div>
+                                      <p><!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+                                      Reference site about Lorem Ipsum, giving information on its origins, as well.</p>
+                                      <form action="#">
+                                          <div class="form-row">
+                                              <div class="col dk-footer-form">
+                                                  <input type="email" class="form-control" placeholder="Email Address">
+                                                  <button type="submit">
+                                                      <i class="fa fa-send fa-3x"></i>
+                                                  </button>
+                                              </div>
+                                          </div>
+                                      </form>
+                                      <!-- End form -->
+                                  </div>
+                                  <!-- End footer widget -->
+                              </div>
+                              <!-- End Col -->
+                          </div>
+                          <!-- End Row -->
+                      </div>
+                      <!-- End Col -->
+                  </div>
+                  <!-- End Widget Row -->
+              </div>
+              <!-- End Contact Container -->
+      
+      
+              <div class="copyright">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <span>Copyright © 2019, All Right Reserved Seobin</span>
+                          </div>
+                          <!-- End Col -->
+                          <div class="col-md-6">
+                              <div class="copyright-menu">
+                                  <ul>
+                                      <li>
+                                          <a href="#">Home</a>
+                                      </li>
+                                      <li>
+                                          <a href="#">Terms</a>
+                                      </li>
+                                      <li>
+                                          <a href="#">Privacy Policy</a>
+                                      </li>
+                                      <li>
+                                          <a href="#">Contact</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <!-- End col -->
+                      </div>
+                      <!-- End Row -->
+                  </div>
+                  <!-- End Copyright Container -->
+              </div>
+              <!-- End Copyright -->
+              <!-- Back to top -->
+              <div id="back-to-top" class="back-to-top">
+                  <button class="btn btn-dark" title="Back to Top" style="display: block;">
+                      <i class="fa fa-angle-up"></i>
+                  </button>
+              </div>
+              <!-- End Back to top -->
+      </footer>
+      
+      
+      <!-- Credit to https://bootsnipp.com/snippets/ooa9M -->
+
+
+
+
+
+    
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    
+    <script src="click.js"></script>
+</body>
+</html>
